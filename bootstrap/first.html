@@ -1,0 +1,188 @@
+<!-- first.html
+bootstrap2 支持多个浏览器
+bootstrap3 放弃IE8 火狐3.0
+起步 CSS 组件 javascript 
+bootstrap中文件列表内容
+有css 可以只用bootstrap的css 结合angularjs的javascript
+要注意bootstrap的js插件要依赖jquery 所以引入之前 需要先引入jquery -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+<!-- 	适配移动浏览器要加  移动设备浏览器的页面放在虚拟的视口，而虚拟的视口会比屏幕宽 ，这样就不用把每个网页放在很小的视口中 但是这样就没有适配移动设备 用户只能平移缩放来浏览网页
+	我们这里直接调整视口大小等于物理设备真实的宽度 初始缩放比例为1 这样就可以根据设备的屏幕真实宽度 做好页面适配 -->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>bootstrap标准的HTML模版</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/your-style.css">
+</head>
+<body>
+	<h1>Hello,world</h1>
+	<p>前端人员 习惯为网站设置一个全局样式 那么在bootstrap框架中也不列外 bootstrap框架的核心是轻量的css基础代码库 他并没有一味的重置样式 而是注重各浏览器基础表现，降低开发难度。大部分前端人员都具有归零的思想，但是这样就有潜在的问题 全局样式表中em变成普通的标记，但明明是斜体，怎么就没有效果了呢</p>
+	<p>
+	bootstap为解决这一问题（也算是bootstrap的表征样式） ：
+	移除body的margin的声明 ；设置body的背景色为白色
+	为排版设置了基本的字体、字号和行高；
+	设置全局链接的颜色 且当链接处于悬浮:hower状态时才会显示下划线样式
+
+	</p>
+	<p>bootstrap中的标题 样式</p>
+	<h1 class="h1">Bootstrap标题一 <small>我是副标题</small> </h1>
+		<h2 class="h2">Bootstrap标题一 <small>我是副标题</small></h2>
+			<h3 class="h3">Bootstrap标题一 <small>我是副标题</small></h4>
+				<h4 class="h4">Bootstrap标题一 <small>我是副标题</small></h4>
+					<h5 class="h5">Bootstrap标题一 <small>我是副标题</small></h5>
+						<h6 class="h6">Bootstrap标题一 <small>我是副标题</small></h6>
+						<p class="lead"> 这里对<strong>某些段落做强调内容</strong> 处理 如果你对CSS预处理器有所了解，那么你完全可以根据<strong>Bootstrap</strong> 提供的预编译版本LESS(或者Sass)进行自定义排版设置。在<strong>Bootstrap粗体</strong> 中，排版设置的默认值都存在variables.less文件中(Sass版本存在_variables.scss中)的两个变量：<em>斜体</em>em   与   i标签<i>想不到</i></p>
+  <h3 class="h3">bootstrap中强调文本内容所使用的与文本有关的css类 文本强调 文本对齐方式</h3>						
+
+<p>在Bootstrap中除了使用标签等说明正文某些字词、句子的重要性，Bootstrap还定义了一套类名，这里称其为强调类名（类似前面说的“.lead”）,这些强调类都是通过颜色来表示强调，具本说明如下：
+
+.text-muted：提示，使用浅灰色（#999）
+.text-primary：主要，使用蓝色（#428bca）
+.text-success：成功，使用浅绿色(#3c763d)
+.text-info：通知信息，使用浅蓝色（#31708f）
+.text-warning：警告，使用黄色（#8a6d3b）
+.text-danger：危险，使用褐色（#a94442）</p>
+   <div class="text-muted text-left" >.text-muted 效果 并同时设置左对齐</div>
+   <div class="text-primary text-right">.text-primary 效果 并同时设置右对齐</div>
+   <div class="text-success text-center">.text-success 效果 并同时设置居中对齐</div>
+   <div class="text-info text-justify">.text-info 效果 并同时设置两端对齐 -----两端对齐需要文字多的时候才能看出效果------两端对齐需要文字多的时候才能看出效果------两端对齐需要文字多的时候才能看出效果-------两端对齐需要文字多的时候才能看出效果-------两端对齐需要文字多的时候才能看出效果--------两端对齐需要文字多的时候才能看出效果-------两端对齐需要文字多的时候才能看出效果-------两端对齐需要文字多的时候才能看出效果--------两端对齐需要文字多的时候才能看出效果</div>
+   <div class="text-warning">.text-warning 效果</div>
+   <div class="text-danger">.text-danger 效果 </div>
+
+
+   <h3 class="h3">bootstrap中 无序列表 有序列表 有序列表嵌套</h3>
+  <h5>普通列表</h5>
+   <ul>无序列表 表头
+   	<li>listitem1</li>
+   	<li>listitem2</li>
+   	<li>listitem3</li>
+   </ul>
+  <h5>有序列表</h5>
+   <ol>有序列表 表头
+   	<li>listitem1</li>
+   	<li>listitem2</li>
+   	<li>listitem3</li>
+   </ol>
+   <h5>有序列表嵌套</h5>
+   <ol>有序列表 表头
+   	<li>有序列表1</li>
+   	<li>有序列表嵌套
+   		<ol>
+   			<li>有序列表嵌套1</li>
+   			<li>有序列表嵌套2</li>
+   		</ol>
+   	</li>
+   	<li>有序列表2</li>
+
+   </ol>
+
+
+	<!--无序列表去点-->
+<ul>
+    <li>
+    项目列表
+        <ul>
+        <li>带有项目符号</li>
+        <li>带有项目符号</li>
+        </ul>
+    </li>
+    <li>
+    项目列表
+        <ul class="list-unstyled">
+        <li>不带项目符号</li>
+        <li>不带项目符号</li>
+        </ul>
+    </li>
+    <li>项目列表</li>
+</ul>
+<h5>有序列表去序号 无序列表去点</h5>
+<ul>
+    <li>
+    项目列表
+        <ul>
+        <li>带有项目符号</li>
+        <li>带有项目符号</li>
+        </ul>
+    </li>
+    <li>
+    项目列表
+        <ul class="list-unstyled">
+        <li>不带项目符号</li>
+        <li>不带项目符号</li>
+        </ul>
+    </li>
+    <li>项目列表</li>
+</ul>
+<ol>
+    <li>
+    项目列表
+        <ol>
+        <li>带有项目编号</li>
+        <li>带有项目编号</li>
+        </ol>
+    </li>
+    <li>
+    项目列表
+        <ol class="list-unstyled">
+        <li>不带项目编号</li>
+        <li>不带项目编号</li>
+        </ol>
+    </li>
+    <li>项目列表</li>
+</ol>
+<h5>bootstrap通过添加<strong>list-inline</strong>来实现内联列表 简单说就是将垂直列表换成水平列表，而且去掉项目符号或着项目编号 保持水平显示；也可以说内联列表是为了制作水平导航儿生</h5>
+<ul class="list-inline">
+	<li>W3cSchool</li>
+	<li>Blog</li>
+	<li>CSS3</li>
+	<li>jQuery</li>
+	<li>PHP</li>
+</ul>
+<h5>定义列表是什么鬼 dl>dt+dd</h5>
+ <dl>
+ 	<dt>W3cschool</dt>
+ 	<dd>一个致力于推广国内前端行业的技术博客</dd>
+ 	<dt>慕课网 网易云课堂</dt>
+ 	<dd>一个技术学习网站</dd>
+ </dl>
+ <h5>定义列表 水平显示</h5>
+ <dl class="dl-horizontal">
+    <dt>W3cplus</dt>
+    <dd>一个致力于推广国内前端行业的技术博客。它以探索为己任，不断活跃在行业技术最前沿，努力提供高质量前端技术博文</dd>
+    <dt>慕课网</dt>
+    <dd>一个专业的，真心实意在做培训的网站</dd>
+    <dt>我来测试一个标题，我来测试一个标题</dt>
+    <dd>我在写一个水平定义列表的效果，我在写一个水平定义列表的效果</dd>
+</dl>
+
+<h5>代码</h5>
+<div>Bootstrap的代码风格有三种：<code>&lt;code&gt;</code>、<code>&lt;pre&gt;</code>和<code>&lt;kbd&gt;</code></div>
+pre风格：
+<div>
+<pre>
+&lt;ul&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+<pre>
+	class mycla{
+
+	}
+</pre>
+<kbd>
+	
+	输入
+</kbd>
+<code>echo phpinfo();</code>
+</div>
+kbd风格：
+<div>请输入<kbd>ctrl+c</kbd>来复制代码，然后使用<kbd>ctrl+v</kbd>来粘贴代码</div>
+
+	<script src="http://libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+</html>
