@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html  ng-app="MyCSS">
+<head>
+	<meta charset="UTF-8">
+	
+	<title>Document</title>
+		<script src='../framwork/bower_components/angular/angular.js'></script>
+	<link rel="stylesheet" href="../framwork/bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="../css/mycss.css">
+	<script src="../js/mycss.js"></script>
+</head>
+<body>
+		<div ng-controller='CSSCtrl'>
+			<p class='{{color}}'> 测试CSS样式 </p>
+			<button class="btn btn-default" ng-click="setRed()">
+				点解切换背景颜色
+			</button>
+		</div>
+		<div ng-controller="HeaderController">
+			<div ng-class="{error: isError,warning: isWarning}">
+				{{messageText}}
+			</div>
+			<button ng-click="showError()">Simulate Error</button>
+			<button ng-click="showWarning()">Simulate Warning</button>
+		</div>
+		<div ng-controller="ToggleMenuControl">
+			<button ng-click="toggleMenu()">Toggle Menu</button>
+			<ul ng-show="menuState.show">
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+
+
+		</div>
+</body>
+</html>
